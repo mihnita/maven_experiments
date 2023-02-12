@@ -23,4 +23,10 @@ gh workflow run
 
 ## Added various Test and IT classes
 
-Notice that the integration tests don't run, even when we invoke `mvn package`.
+Notice that the integration tests don't run, even when we invoke `mvn -q verify`.
+
+## Added maven-failsafe-plugin to pluginManagement
+
+The integration tests still don't run.
+Adding something to pluginManagement does not mean is it also used.
+Try `mvn -q verify` or `mvn -q integration-test`
