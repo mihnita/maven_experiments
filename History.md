@@ -38,3 +38,28 @@ Now the integration tests work for module2, but not for module3
 ## Moved the build / plugins / maven-failsafe-plugin to root
 
 Now the integration tests work for both module2 and module3
+
+## Experimenting with BOM (Bill of Materials) - as a dependency
+
+See https://reflectoring.io/maven-bom/
+
+There are two main ways to do it:
+- as a parent POM
+- as a dependency
+
+Will try first as a dependency.
+
+Notes:
+```
+mvn dependency:analyze-report
+```
+Warns that `"Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!"`
+
+And
+```
+mvn versions:display-plugin-updates
+```
+Warns that `"The following plugins do not have their version specified"`
+
+This seems to indicate that not everything declared in the bom ends up propagating to the other modules.  
+Like the encooding (in properties) and the plugin versions.
