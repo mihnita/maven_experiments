@@ -13,6 +13,17 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      mvn_goal:
+        description: 'Maven goal to execute'
+        required: true
+        default: 'package' 
+        type: choice
+        options:
+          - test
+          - package
+          - deploy
 
 jobs:
   build:
@@ -28,4 +39,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn --batch-mode --errors --show-version --no-transfer-progress --fail-at-end package
+      run: |
+        echo "The mvn_goal is ${{ github.event.inputs.mvn_goal }}, but we don't use it for now."
+        mvn --batch-mode --errors --show-version --no-transfer-progress --fail-at-end package

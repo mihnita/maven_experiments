@@ -13,3 +13,10 @@ Nothing interesting yet.
 Adding module1, module2, module3, create a parent pom.xml to build it all, format stuff as I like it.
 
 Unit tests show messages, colored to see what happens, with "SPY" so that we can grep.
+
+## Created a GitHub action & added a `workflow_dispatch`
+
+Run (interactive) with:
+```
+gh workflow run
+```
