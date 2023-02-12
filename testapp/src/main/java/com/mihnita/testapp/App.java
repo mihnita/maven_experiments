@@ -1,4 +1,4 @@
-package com.mihnita;
+package com.mihnita.testapp;
 
 /**
  * Hello world!
@@ -9,6 +9,6 @@ public class App {
 	}
 
 	public static void sayHi() {
-		System.out.println("\033[93mSPY: Hello from the main app!\033[m");
+		System.out.println("\033[93mSPY: Unit test from the main app!\033[m");
 	}
 }

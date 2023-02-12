@@ -20,3 +20,7 @@ Run (interactive) with:
 ```
 gh workflow run
 ```
+
+## Added various Test and IT classes
+
+Notice that the integration tests don't run, even when we invoke `mvn package`.
