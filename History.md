@@ -78,3 +78,15 @@ have a lot fewer warnings.
 
 In fact the only one is `"Project does not define required minimum version of Maven"`
 which is not connected to the whole BOM experiment.
+
+## Added maven-enforcer-plugin, updated all versions
+
+At this point everything is squeaky clean:
+```
+mvn dependency:tree
+mvn dependency:analyze-report
+mvn versions:display-dependency-updates
+mvn versions:display-plugin-updates
+mvn versions:display-property-updates
+```
+No warnings, all versions are satisfied, no updates (as of today, of course things will change).
