@@ -10,12 +10,4 @@
 
   <artifactId>module2</artifactId>
 
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-failsafe-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
-
 </project>

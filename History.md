@@ -34,3 +34,7 @@ Try `mvn -q verify` or `mvn -q integration-test`
 ## Added maven-failsafe-plugin to build / plugins, module2 only
 
 Now the integration tests work for module2, but not for module3
+
+## Moved the build / plugins / maven-failsafe-plugin to root
+
+Now the integration tests work for both module2 and module3
