@@ -39,7 +39,7 @@ Now the integration tests work for module2, but not for module3
 
 Now the integration tests work for both module2 and module3
 
-## Experimenting with BOM (Bill of Materials) - as a dependency
+## Experimenting with BOM (Bill of Materials) - dependency
 
 See https://reflectoring.io/maven-bom/
 
@@ -63,3 +63,18 @@ Warns that `"The following plugins do not have their version specified"`
 
 This seems to indicate that not everything declared in the bom ends up propagating to the other modules.  
 Like the encooding (in properties) and the plugin versions.
+
+## Experimenting with BOM (Bill of Materials) - as a parent POM
+
+Both:
+```
+mvn dependency:analyze-report
+```
+and
+```
+mvn versions:display-plugin-updates
+```
+have a lot fewer warnings.
+
+In fact the only one is `"Project does not define required minimum version of Maven"`
+which is not connected to the whole BOM experiment.
