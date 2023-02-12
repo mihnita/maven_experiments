@@ -30,3 +30,7 @@ Notice that the integration tests don't run, even when we invoke `mvn -q verify`
 The integration tests still don't run.
 Adding something to pluginManagement does not mean is it also used.
 Try `mvn -q verify` or `mvn -q integration-test`
+
+## Added maven-failsafe-plugin to build / plugins, module2 only
+
+Now the integration tests work for module2, but not for module3
