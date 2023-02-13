@@ -14,16 +14,6 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
-    inputs:
-      mvn_goal:
-        description: 'Maven goal to execute'
-        required: true
-        default: 'package' 
-        type: choice
-        options:
-          - test
-          - package
-          - deploy
 
 jobs:
   build:
